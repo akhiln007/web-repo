@@ -1,2 +1,3 @@
 name: Codeability, The ability to code
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
