@@ -15,7 +15,7 @@ Example OLTP Queries:-
 -What is the address and phone number of person in charge of the supplies department.
 -How many employees have received an ‘’excellent’’ credentials in the latest appraisal.
 
-2) Historical Data(OLAP)
+2) Historical Data (OLAP)
 
 Data that “tells”
 
