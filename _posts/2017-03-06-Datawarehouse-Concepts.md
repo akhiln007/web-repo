@@ -1,4 +1,4 @@
-1)Operational Data (OLTP Applications)
+1) Operational Data (OLTP Applications)
 
 Data that “works”
 
@@ -11,7 +11,7 @@ For eg: for taking money from an ATM, you need to know the Bank a/c no., ATM PIN
 
 Example OLTP Queries:-
 
--What is the salary of Mr. Nair
+-What is the salary of Mr. Nair.
 -What is the address and phone number of person in charge of the supplies department.
 -How many employees have received an ‘’excellent’’ credentials in the latest appraisal.
 
