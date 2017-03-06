@@ -4,10 +4,10 @@ Data that “works”
 
 For eg: for taking money from an ATM, you need to know the Bank a/c no., ATM PIN, Balance etc.
 
--Frequent updates and queries
+-Frequent updates and queries.
 -Normalized for efficient search and updates.
--Fragmented and local relevance
--Point Queries: queries accessing individual tuples.(eg: what are the last 10 transactions)
+-Fragmented and local relevance.
+-Point Queries: queries accessing individual tuples.(eg: what are the last 10 transactions).
 
 Example OLTP Queries:-
 
@@ -15,7 +15,7 @@ Example OLTP Queries:-
 -What is the address and phone number of person in charge of the supplies department.
 -How many employees have received an ‘’excellent’’ credentials in the latest appraisal.
 
-2)Historical Data(OLAP)
+2) Historical Data(OLAP)
 
 Data that “tells”
 
@@ -31,26 +31,26 @@ Example OLAP Queries:-
 -How is the employee attrition scene changing over the years across the company.
 -Is it financially viable to continue our manufacturing unit in Kerala.
 
-3)Datawarehouse
+3) Datawarehouse
 
 -An infrastructure to manage historical data.
 -Designed to support OLAP queries involving use of aggregates.
--Post retrieval processing(reporting)
+-Post retrieval processing(reporting).
 
-4)Datamart
+4) Datamart
 
 -Data warehouses are seen as a collection of data marts - Or  historical data about each OLTP segment/module that feeds into the Datawarehouse.
 
-5)OLAP Query Characteristics
+5) OLAP Query Characteristics
 
 -Aggregation and summarization over large data sets.
 -Trend detection.
 -Multi- dimensional projections.
 
-6)ROLAP
+6) ROLAP
 
 In ROLAP, the hypercube queries are transformed to relational queries and maintain the data cube in a set of RDBMS tables.
 
-7)MOLAP
+7) MOLAP
 
 Use a separate storage model for multi dimensional data.
