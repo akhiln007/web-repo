@@ -2,22 +2,12 @@
 layout: default
 title: Codeability, The ability to learn coding
 ---
-    		<div class="blurb">
-        		<h2>Learn to Code!</h2>
-				<p>ॐ सह नाववतु । <br>
-				   सह नौ भुनक्तु । <br>
-				   सह वीर्यं करवावहै ।<br>
-                                   तेजस्वि नावधीतमस्तु मा विद्वि षावहै  ।<br>
-                                   ॐ शान्तिः शान्तिः शान्तिः ॥</p>
-                                   
-                                <h5>Meaning</h5>
-                                <p>
-                                   Om, May God Protect us Both (the Teacher and the Student), <br>
-				   May God Nourish us Both, <br>
-                                   May we Work Together with Energy and Vigour, <br>
-                                   May our Study be Enlightening and not give rise to Hostility, <br>
-                                   Om, Peace, Peace, Peace.<br>
-                                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Upanishad
-                                </p>
-    		</div><!-- /.blurb -->
 
+<div id="home">
+  <h1>My Study notes</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
