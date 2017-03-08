@@ -5,8 +5,11 @@ Data that “works”
 For eg: for taking money from an ATM, you need to know the Bank a/c no., ATM PIN, Balance etc.
 
 a) Frequent updates and queries.
+
 b) Normalized for efficient search and updates.
+
 c) Fragmented and local relevance.
+
 d) Point Queries: queries accessing individual tuples.(eg: what are the last 10 transactions).
 
 Example OLTP Queries:-
