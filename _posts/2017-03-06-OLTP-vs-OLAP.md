@@ -1,3 +1,12 @@
+
+---
+layout: post
+title: DW - OLTP vs OLAP
+---
+
+{{ page.title }}
+================
+
 1) Operational Data (OLTP Applications)
 
 Data that “works”
