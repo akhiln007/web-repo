@@ -7,6 +7,8 @@ title: DW - OLTP vs OLAP
 {{ page.title }}
 ================
 
+<p class="meta">06 Mar 2017 - DW</p>
+
 1) Operational Data (OLTP Applications)
 
 Data that “works”
