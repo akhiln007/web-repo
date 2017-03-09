@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: DW - OLTP vs OLAP
