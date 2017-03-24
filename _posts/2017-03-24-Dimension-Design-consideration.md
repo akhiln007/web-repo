@@ -8,8 +8,8 @@ title: DW - Dimension Design Consideration
 
 1) Surrogate Key
 
-	A system generated incremental integer, aka Surrogate Key, is recommended in the dimension. Surrogate key is used to:
-	
+A system generated incremental integer, aka Surrogate Key, is recommended in the dimension. Surrogate key is used to:
+
 - Isolate data warehouse from operational data changes.
 
 - Smaller keys translate into smaller fact tables and smaller fact table indices and more fact table rows per block I/O.
@@ -80,7 +80,7 @@ There are scenarios that snowflake schema could be useful:
 
 4)	Slow Changing Dimension
 
-	Slow changing dimension refers to the dimension whose attributes evolve over time, e.g. Persons change their names, work location, job code etc.  For every slow changing dimension attributes, it needs to identify “change” history.
+Slow changing dimension refers to the dimension whose attributes evolve over time, e.g. Persons change their names, work location, job code etc.  For every slow changing dimension attributes, it needs to identify “change” history.
 
 	Depending on business requirement, a slow changing dimension can be designed in three basic options:
   
@@ -142,8 +142,6 @@ Rolled-up Dimension refers to the dimension that is created from the base dimens
 Rolled-up Dimension has its own surrogate key and need to carry attributes for its level from base dimension. Consider Rolled-up dimension as an independent dimension table.
 
 Kimball Tips: When aggregating facts, we either eliminate dimensionality or associate the facts with a roll-up dimension. These rolled-up, aggregated dimension tables should be shrunken versions of the dimension associated with the granular base fact table. In this way, aggregated dimension conform to the base dimension table.
-
-Example below shows Product Group Dimension is a shrunken version of Product Dimension. If there is fact table aggregated at Product Group level, Product Group Dimension can be used, and it also provides all attributes for Product Category.
 
 Note: Slow changing is a business requirement, before making a dimension into a SCD; confirm the needs with business user as slow changing dimension could have performance impact on both ETL job and BI query. 
 
