@@ -82,7 +82,7 @@ There are scenarios that snowflake schema could be useful:
 
 Slow changing dimension refers to the dimension whose attributes evolve over time, e.g. Persons change their names, work location, job code etc.  For every slow changing dimension attributes, it needs to identify “change” history.
 
-	Depending on business requirement, a slow changing dimension can be designed in three basic options:
+Depending on business requirement, a slow changing dimension can be designed in three basic options:
   
   Type 1 SCD
   
