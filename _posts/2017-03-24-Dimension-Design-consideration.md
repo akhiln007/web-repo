@@ -9,20 +9,21 @@ title: DW - Dimension Design Consideration
 1) Surrogate Key
 
 	A system generated incremental integer, aka Surrogate Key, is recommended in the dimension. Surrogate key is used to:
+	
+- Isolate data warehouse from operational data changes.
 
-	  - Isolate data warehouse from operational data changes.
+- Smaller keys translate into smaller fact tables and smaller fact table indices and more fact table rows per block I/O.
 
-	  - Smaller keys translate into smaller fact tables and smaller fact table indices and more fact table rows per block I/O.
+- Allows data integration of multiple operational source.
 
-	  - Allows data integration of multiple operational source.
+- Provide mechanism for Slow Changing Dimension.
 
-	  - Provide mechanism for Slow Changing Dimension.
+- Handle “Unassigned” and “Missing” dimension data.
 
-	  - Handle “Unassigned” and “Missing” dimension data.
+- Increase BI query performance by easily join fact and dimension table using integer field.
+	
+Kimball Tips: Every join between dimension and fact tables in the data warehouse should be based on meaningless integer surrogate key. You should avoid using the natural operational production codes. None of the data warehouse keys should be smart, where you can tell something about the row just by looking at the key.
 
-	  - Increase BI query performance by easily join fact and dimension table using integer field.
-
-	Kimball Tips: Every join between dimension and fact tables in the data warehouse should be based on meaningless integer surrogate key. You should avoid using the natural operational production codes. None of the data warehouse keys should be smart, where you can tell something about the row just by looking at the key.
 
 2) Star Schema 
 
@@ -30,36 +31,34 @@ title: DW - Dimension Design Consideration
 
 Why star schema?
 
-	- Dimension data are denormalized into flat table design. 
+- Dimension data are denormalized into flat table design. 
 
-	- Central Fact Table.
+- Central Fact Table.
 
-	- Less tables are created for Dimension.
+- Less tables are created for Dimension.
 
-	- Optimize query performance by reducing chains of joins.
+- Optimize query performance by reducing chains of joins.
 
-	- Small metadata (Few FK’s needs to be stored).
+- Small metadata (Few FK’s needs to be stored).
 
-	- Simple to comprehend and design.
+- Simple to comprehend and design.
 
-	- Data warehouse best practice.
-   
-	Oracle Database Data Warehousing Guide:
+- Data warehouse best practice.
 
-Oracle recommends that you choose a star schema unless you have a clear reason not to.
+Oracle Database Data Warehousing Guide: Oracle recommends that you choose a star schema unless you have a clear reason not to.
 
 
 3)	Permissible Snowflake
 
   The snowflake schema is a variation of the star schema in which the redundant attributes are removed from the dimension tables and placed in normalized tables.
+  
+- Central Fact table.
 
-	- Central Fact table.
+- Normalized dimension tables storing atomic data units.
 
-	- Normalized dimension tables storing atomic data units.
+- Faster query responses.
 
-	- Faster query responses.
-
-	- Easy Updation.
+- Easy Updation.
 
 Limitations	
 
@@ -71,13 +70,13 @@ Limitations
 
 There are scenarios that snowflake schema could be useful:	
 
-	- When hierarchy levels or attributes are used in various fact aggregation. If an Order Fact is captured at the Product level, it should use Product Dimension. If the Order fact is also aggregated at Product Group level for query performance, a Product Group Dimension should be created.
-         
-	- When levels in hierarchy constitutes a recursive hierarchy.	
+- When hierarchy levels or attributes are used in various fact aggregation. If an Order Fact is captured at the Product level, it should use Product Dimension. If the Order fact is also aggregated at Product Group level for query performance, a Product Group Dimension should be created.
 
-	- When dimension attributes can be enriched from external source.
+- When levels in hierarchy constitutes a recursive hierarchy.	
 
-	- 3rd party system can provide rich attributes to data warehouse dimensions, e.g. Dun and Bradstreet Rating Data. Usually these data are sourced from external system and can be loaded to data warehouse at different time or at different frequency. It is more efficient to model 3rd party attributes data in a separate table and provides the link to main dimension table.
+- When dimension attributes can be enriched from external source.
+
+- 3rd party system can provide rich attributes to data warehouse dimensions, e.g. Dun and Bradstreet Rating Data. Usually these data are sourced from external system and can be loaded to data warehouse at different time or at different frequency. It is more efficient to model 3rd party attributes data in a separate table and provides the link to main dimension table.
 
 4)	Slow Changing Dimension
 
@@ -117,29 +116,30 @@ There are scenarios that snowflake schema could be useful:
 
 5) Degenerate Dimension
 
-	A degenerate dimension (DD) acts as a dimension key in the fact table, however, it does not join to a corresponding dimension table. Degenerate dimensions commonly occur when the fact table’s grain is a single transaction.
-	Keep operational control numbers such as order numbers, invoice numbers in fact table and use it as degenerate dimension. Degenerate dimensions often play an integral role in the fact table’s primary key. Instead of combining all foreign keys in fact table (e.g. surrogate key columns) for primary key, the degenerate dimension guarantees the uniqueness of a fact table row. Degenerate dimension is a good candidate for fact record counts. 
+A degenerate dimension (DD) acts as a dimension key in the fact table, however, it does not join to a corresponding dimension table. Degenerate dimensions commonly occur when the fact table’s grain is a single transaction.
 
-	Kimball Tips: We typically do not implement a surrogate key for DD. Usually the values for the degenerate dimension are unique and reasonably sized. However, if the operational identifier is an unwieldy alpha-numeric, a surrogate key might conserve significant space, especially if the fact table has a large number of rows.
+Keep operational control numbers such as order numbers, invoice numbers in fact table and use it as degenerate dimension. Degenerate dimensions often play an integral role in the fact table’s primary key. Instead of combining all foreign keys in fact table (e.g. surrogate key columns) for primary key, the degenerate dimension guarantees the uniqueness of a fact table row. Degenerate dimension is a good candidate for fact record counts. 
+
+Kimball Tips: We typically do not implement a surrogate key for DD. Usually the values for the degenerate dimension are unique and reasonably sized. However, if the operational identifier is an unwieldy alpha-numeric, a surrogate key might conserve significant space, especially if the fact table has a large number of rows.
 
 6)	Role-Playing Dimension
 
-	Role playing occurs when a single physical dimension table appears several times in a fact table, each represented as a separate logical table. E.g. Order Date Dimension, Purchase Date Dimension, Service Date Dimension, Hire Date Dimension can all be sourced from Time Date Dimension. Do not create multiple physical tables for all Time Date related dimension, instead, a database view or OBIEE view can be created from the role playing Date dimension.
+Role playing occurs when a single physical dimension table appears several times in a fact table, each represented as a separate logical table. E.g. Order Date Dimension, Purchase Date Dimension, Service Date Dimension, Hire Date Dimension can all be sourced from Time Date Dimension. Do not create multiple physical tables for all Time Date related dimension, instead, a database view or OBIEE view can be created from the role playing Date dimension.
 
-	Kimball Tips: Role-playing in a data warehouse occurs when a single dimension simultaneously appears several times in the fact table. The underlying dimension may exist as a single physical table, but each of the roles should be presented to the data access tools in a separately labeled view.
+Kimball Tips: Role-playing in a data warehouse occurs when a single dimension simultaneously appears several times in the fact table. The underlying dimension may exist as a single physical table, but each of the roles should be presented to the data access tools in a separately labeled view.
 
 7)	Junk Dimensions
 
-	Instead of storing multiple indicators and flags in the fact table, they could be grouped together to form a junk dimension.
+Instead of storing multiple indicators and flags in the fact table, they could be grouped together to form a junk dimension.
 
-	Kimball Tips: A junk dimension is a convenient grouping of typically low-cardinality flags and indicators. By creating an abstract dimension, we remove the flags from the fact table while placing them into a useful dimensional framework.
+Kimball Tips: A junk dimension is a convenient grouping of typically low-cardinality flags and indicators. By creating an abstract dimension, we remove the flags from the fact table while placing them into a useful dimensional framework.
 	 
 
 8)	Rolled-up Dimension
 
-	Rolled-up Dimension refers to the dimension that is created from the base dimension table. It is used strictly for aggregated fact. As we do not need to build all potential aggregation combination of a fact table, neither do we need to create all levels of base dimension into rolled-up dimension tables.
+Rolled-up Dimension refers to the dimension that is created from the base dimension table. It is used strictly for aggregated fact. As we do not need to build all potential aggregation combination of a fact table, neither do we need to create all levels of base dimension into rolled-up dimension tables.
 
-	Rolled-up Dimension has its own surrogate key and need to carry attributes for its level from base dimension. Consider Rolled-up dimension as an independent dimension table.
+Rolled-up Dimension has its own surrogate key and need to carry attributes for its level from base dimension. Consider Rolled-up dimension as an independent dimension table.
 
 Kimball Tips: When aggregating facts, we either eliminate dimensionality or associate the facts with a roll-up dimension. These rolled-up, aggregated dimension tables should be shrunken versions of the dimension associated with the granular base fact table. In this way, aggregated dimension conform to the base dimension table.
 
