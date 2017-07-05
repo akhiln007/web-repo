@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQL SELECT Statement for retrieving data
+title: SQL - SELECT Statement for retrieving data
 ---
 {{ page.title }}
 ================
