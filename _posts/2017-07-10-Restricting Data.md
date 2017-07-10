@@ -26,6 +26,7 @@ SELECT last_name
 FROM employees
 WHERE hire_date = '17-FEB-96' ;
 
+
 2) Substitution Variables
 
 Use substitution variables to:
@@ -64,9 +65,11 @@ FROM employees
 ORDER BY &column_name ;
 
 
+
 3) Text Fields vs. Numeric Fields
 
 SQL requires single quotes around text values (most database systems will also allow double quotes). However, numeric fields should not be enclosed in quotes.
+
 
 4) Operators in the WHERE Clause
 
@@ -76,7 +79,8 @@ The following operators can be used in the WHERE clause:
 
 <>    Not equal. Note: In some versions of SQL this operator may be written as !=
 
->     Greater than
+>
+Greater than
 
 <     Less than
 
@@ -128,6 +132,7 @@ SELECT last_name, manager_id
 FROM employees
 WHERE manager_id IS NULL;
 
+
 5) The SQL AND, OR and NOT Operators
 
 The WHERE clause can be combined with AND, OR, and NOT operators. The AND and OR operators are used to filter records based on more than one condition:
@@ -153,6 +158,7 @@ FROM employees
 WHERE job_id
 NOT IN ('IT_PROG', 'ST_CLERK', 'SA_REP');
 
+
 6) The SQL ORDER BY Keyword
 
 The ORDER BY keyword is used to sort the result-set in ascending or descending order. The ORDER BY keyword sorts the records in ascending order by default. To sort the records in descending order, use the DESC keyword.
@@ -163,6 +169,7 @@ ORDER BY column1, column2, ... ASC|DESC;
 
 SELECT * FROM Customers
 ORDER BY Country ASC, CustomerName DESC;
+
 
 7) The SQL INSERT INTO Statement
 
@@ -181,6 +188,7 @@ Inserting Special Values: The SYSDATE function records the current date and time
 INSERT INTO employees (employee_id, first_name, last_name,email, phone_number, hire_date, job_id, salary, commission_pct, manager_id, department_id)
 VALUES (113, 'Louis', 'Popp','LPOPP', '515.124.4567',SYSDATE, 'AC_ACCOUNT', 6900,NULL, 205, 110);
 
+
 8) Creating a Script
 
 Use & substitution in a SQL statement to prompt for values.
@@ -188,6 +196,7 @@ Use & substitution in a SQL statement to prompt for values.
 INSERT INTO departments
 (department_id, department_name, location_id)
 VALUES (&department_id, '&department_name',&location);
+
 
 9) Copying Rows from another Table
 
@@ -197,6 +206,7 @@ INSERT INTO sales_reps(id, name, salary, commission_pct)
 SELECT employee_id, last_name, salary, commission_pct
 FROM employees
 WHERE job_id LIKE '%REP%';
+
 
 10) What is a NULL Value?
 
@@ -213,6 +223,7 @@ Explicit method: Specify the NULL keyword in the VALUES clause.
 
 INSERT INTO departments VALUES (100, 'Finance', NULL, NULL);
 
+
 11) How to Test for NULL Values?
 
 It is not possible to test for NULL values with comparison operators, such as =, <, or <>. We will have to use the IS NULL and IS NOT NULL operators instead.
@@ -228,6 +239,7 @@ IS NOT NULL Syntax
 SELECT column_names
 FROM table_name
 WHERE column_name IS NOT NULL;
+
 
 12) The SQL SELECT TOP Clause
 
