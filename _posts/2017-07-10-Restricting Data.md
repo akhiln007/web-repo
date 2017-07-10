@@ -86,7 +86,7 @@ The following operators can be used in the WHERE clause:
 
 BETWEEN...AND   To display rows based on a range of values
 
-LIKE      Search for a pattern
+LIKE    Search for a pattern
 
 IN    To specify multiple possible values for a column
 
