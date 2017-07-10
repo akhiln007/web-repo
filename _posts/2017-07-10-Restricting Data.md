@@ -46,9 +46,13 @@ UNDEFINE employee_num
 Use substitution variables to supplement the following:
 
 WHERE conditions
+
 ORDER BY clauses
+
 Column expressions
+
 Table names
+
 Entire SELECT statements
 
 SELECT employee_id, last_name, salary, department_id
@@ -68,25 +72,25 @@ SQL requires single quotes around text values (most database systems will also a
 
 The following operators can be used in the WHERE clause:
 
-=		Equal
+=     Equal
 
-<>		Not equal. Note: In some versions of SQL this operator may be written as !=
+<>    Not equal. Note: In some versions of SQL this operator may be written as !=
 
->		Greater than
+>     Greater than
 
-<		Less than
+<     Less than
 
->=		Greater than or equal
+>=    Greater than or equal
 
-<=		Less than or equal
+<=    Less than or equal
 
 BETWEEN...AND   To display rows based on a range of values
 
-LIKE		Search for a pattern
+LIKE      Search for a pattern
 
-IN		To specify multiple possible values for a column
+IN    To specify multiple possible values for a column
 
-IS NULL  	Is a NULL value.
+IS NULL   Is a NULL value.
 
 SELECT last_name, salary
 FROM employees
