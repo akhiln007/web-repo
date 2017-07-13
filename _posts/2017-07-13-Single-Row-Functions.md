@@ -25,8 +25,7 @@ Functions are a very powerful feature of SQL. They can be used to do the followi
 
 There are two types of functions:
 
-Single-row functions
-Multiple-row functions
+Single-row functions and Multiple-row functions
 
 Single-Row Functions
 
@@ -76,6 +75,7 @@ The following single-row functions are discussed in the next lesson titled “Us
 Multiple-Row Functions
 
 Functions can manipulate groups of rows to give one result per group of rows. These functions are also known as group functions.
+
 
 3) Character Functions
 
@@ -128,6 +128,7 @@ REPLACE('JACK and JUE','J','BL')
 
 BLACK and BLUE
 
+
 4) Number Functions
 
 ROUND(45.926, 2) 
@@ -141,6 +142,7 @@ TRUNC(45.926, 2)
 MOD(1600, 300) 
 
 100
+
 
 5) Working with Dates
 
@@ -164,6 +166,7 @@ Current Year Given Date Interpreted (RR) Interpreted (YY)
 
 2001 -> 27-OCT-17 -> 2017 -> 2017
 
+
 6) SYSDATE Function
 
 SYSDATE is a function that returns:
@@ -171,6 +174,7 @@ SYSDATE is a function that returns:
 • Date
 
 • Time
+
 
 7) Arithmetic with Dates
 
@@ -193,6 +197,7 @@ SELECT last_name, (SYSDATE-hire_date)/7 AS WEEKS
 FROM employees
 WHERE department_id = 90;
 
+
 8) Date-Manipulation Functions
 
 • MONTHS_BETWEEN('01-SEP-95','11-JAN-94')	
@@ -210,6 +215,7 @@ WHERE department_id = 90;
 • LAST_DAY ('01-FEB-95')
 
 '28-FEB-95'
+
 
 9) Using ROUND and TRUNC Functions with Dates
 
