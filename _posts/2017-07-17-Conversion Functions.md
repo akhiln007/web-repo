@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SQL - Conversion-Functions
+title: SQL - Conversion Functions
 ---
 
 {{ page.title }}
