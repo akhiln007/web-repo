@@ -16,7 +16,7 @@ In general, the Oracle server uses the rule for expressions when a data type con
 
 Explicit data type conversions are done by using the conversion functions. Conversion functions convert a value from one data type to another. Generally, the form of the function names follows the convention data type TO data type.The first data type is the input data type and the second data type is the output.
 
-2.1) TO_CHAR(number|date,[ fmt],[nlsparams]) : Converts a number or date value to a VARCHAR2 character string with the format model fmt
+2.1) TO_CHAR (number|date,[ fmt],[nlsparams]) : Converts a number or date value to a VARCHAR2 character string with the format model fmt
 
 SELECT employee_id, TO_CHAR(hire_date, 'MM/YY') Month_Hired
 FROM employees
