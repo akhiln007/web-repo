@@ -25,7 +25,7 @@ Group functions operate on sets of rows to give one result per group.
  • VARIANCE :- Variance of n, ignoring null values
 
 
-Guidelines for using the group functions:
+1.a) Guidelines for using the group functions:
 
 • DISTINCT makes the function consider only nonduplicate values; ALL makes it consider every value, including duplicates. The default is ALL and therefore does not need to be specified.
 
