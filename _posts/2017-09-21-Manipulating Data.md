@@ -175,7 +175,7 @@ ROLLBACK TO update_done;
 
 • All savepoints are erased.
 
-18) State of the Data After ROLLBACK
+19) State of the Data After ROLLBACK
 
 • Discard all pending changes by using the ROLLBACK statement:
 
@@ -189,7 +189,7 @@ DELETE FROM copy_emp;
 
 ROLLBACK ;
 
-19) FOR UPDATE Clause in a SELECT Statement
+20) FOR UPDATE Clause in a SELECT Statement
 
 • Locks the rows in the EMPLOYEES table where job_id is SA_REP.
 
