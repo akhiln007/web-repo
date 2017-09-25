@@ -201,3 +201,13 @@ ORDER BY employee_id;
 
 • Lock is released only when you issue a ROLLBACK or a COMMIT.
 
+References:
+
+Oracle® Database Reference 11g Release 1 (11.1)
+
+Oracle® Database SQL Language Reference 11g Release 1 (11.1)
+
+Oracle® Database Concepts 11g Release 1 (11.1)
+
+Oracle® University examples
+
