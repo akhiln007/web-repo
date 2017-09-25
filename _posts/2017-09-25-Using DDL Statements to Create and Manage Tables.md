@@ -211,3 +211,12 @@ ALTER TABLE employees READ WRITE;
 
 DROP TABLE dept80;
 
+References:
+
+Oracle® Database Reference 11g Release 1 (11.1)
+
+Oracle® Database SQL Language Reference 11g Release 1 (11.1)
+
+Oracle® Database Concepts 11g Release 1 (11.1)
+
+Oracle® University examples
