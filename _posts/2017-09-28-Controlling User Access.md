@@ -97,3 +97,13 @@ GRANT select ON alice.departmentsTO PUBLIC;
 • Privileges granted to others through the WITH GRANT OPTION clause are also revoked.
 
 REVOKE select, insert ON departments FROM demo;
+
+References:
+
+Oracle® Database Reference 11g Release 1 (11.1)
+
+Oracle® Database SQL Language Reference 11g Release 1 (11.1)
+
+Oracle® Database Concepts 11g Release 1 (11.1)
+
+Oracle® University examples
