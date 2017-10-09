@@ -150,3 +150,13 @@ SELECT last_name, TO_CHAR(hire_date, 'mm-dd-yy:hh:mi:ss') hire_date, TO_CHAR(hir
 – Time jumps from 02:00:00 AM to 01:00:01 AM
 
 – Values from 01:00:01 AM to 02:00:00 AM are ambiguous because they are visited twice.
+
+References:
+
+Oracle® Database Reference 11g Release 1 (11.1)
+
+Oracle® Database SQL Language Reference 11g Release 1 (11.1)
+
+Oracle® Database Concepts 11g Release 1 (11.1)
+
+Oracle® University examples
