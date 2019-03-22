@@ -40,7 +40,7 @@ patch_date=patch_date+2
 
 if currentDay==patch_date:
 
- subprocess.Popen(['sh','/home/infaprd/start_infa.sh'])
+ subprocess.Popen(['sh','/home/infa/start_infa.sh'])
  
 else:
 
