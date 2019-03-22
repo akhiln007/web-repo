@@ -1,6 +1,6 @@
 ---
 layout: post
-title: PYTHON - To identify "Thursday" after second week "Tuesday" of a month
+title: PY - To identify "Thursday" after second week "Tuesday" of a month
 ---
 
 {{ page.title }}
