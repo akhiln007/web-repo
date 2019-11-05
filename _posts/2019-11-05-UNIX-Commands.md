@@ -1,6 +1,6 @@
 ---
 layout: post
-title: UNIX: Commands
+title: UNIX - Commands
 ---
 
 {{ page.title }}
