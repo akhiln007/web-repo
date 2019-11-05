@@ -1,8 +1,10 @@
 ---
 layout: post
-
 title: UNIX: Commands
 ---
+
+{{ page.title }}
+================
 
 1)	dmesg 
 
