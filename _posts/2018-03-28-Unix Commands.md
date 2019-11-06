@@ -14,21 +14,33 @@ title: UNIX - Commands
 19) Managing Files with the shell
 
 cat filename - outputs contents of filename to display
+
 less filename - Allows scrolling while reading contents of filename
+
 mv file1 file2 - Renames file1 to file2
+
 mv file dir-Moves file to specified directory
+
 cp file1 file2 - Copies file1 and creates file2
+
 rm file-Deletes file
+
 rmdir dir-deletes directory(if empty)
+
 grep string files-Searches through files and displays lines containing matching strings
+
 man grep
 
 20) Working with Compressed files
 
 bunzip2-Expands a compressed file
+
 bzip2-Compresses or expands files and directories
+
 gunzip-Expands a compressed file
+
 gzip-Compresses or expands files and directories
+
 tar-creates, expands or lists the contents of compressed or uncompressed file or directory archives known as tape archives or tarballs
 
 To create a compressed archive of a directory,use tar's czf options
@@ -100,11 +112,17 @@ The /var directory contains subdirectories used by various system services for s
 A number of in-memory variables are assigned and loaded by default when the user logs in. These variables are known as shell environment variables, which can be used by various commands to get information about your environment, such as the type of system you are running, your home directory and the shell in use.
 
 PWD:-To provide the name of the current working directory.
+
 USER:-To declare the user's name, such as andrew.
+
 LANG:-To set language defaults, such as english.
+
 SHELL:-To declare the name and location of the current shell, such as /bin/bash.
+
 PATH:-To set the default location of executable files, such as /bin, /usr/bin and so on.
+
 TERM:-To set the type of terminal in use, such as vt100, which can be important when using screen-oriented programs, such as text editors.
+
 MACHINE:-To declare system type, system architecture and so on.
 
 $env
