@@ -116,7 +116,7 @@ This shows that the owner and group members can read and write to the directory 
 
 In the above example, the mkdir command is used to create a directory. The ls command and its -ld option is used to show permissions and other information about the directory.
 
-The mnemonic forms of chmod's options(when used with plus,+, character to add or a minus sign,-, to take away) designate the follwoing.
+The mnemonic forms of chmod's options(when used with plus,+, character to add or a minus sign,-, to take away) designate the following.
 
 •	u : Adds or removes user (owner) read, write or execute permissions.
 
