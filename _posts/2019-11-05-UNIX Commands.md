@@ -8,7 +8,7 @@ title: UNIX - Commands
 
 1)	dmesg 
 
-ubuntu has a command that enables you to see detailed messages that are output directly by the operating system.
+Ubuntu has a command that enables you to see detailed messages that are output directly by the operating system.
 
 $ dmesg > dmesg.txt
 
