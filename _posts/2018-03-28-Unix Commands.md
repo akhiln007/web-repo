@@ -23,25 +23,25 @@ mv file dir-Moves file to specified directory
 
 cp file1 file2 - Copies file1 and creates file2
 
-rm file-Deletes file
+rm file - Deletes file
 
-rmdir dir-deletes directory(if empty)
+rmdir dir - deletes directory(if empty)
 
-grep string files-Searches through files and displays lines containing matching strings
+grep string files - Searches through files and displays lines containing matching strings
 
 man grep
 
 20) Working with Compressed files
 
-bunzip2-Expands a compressed file
+bunzip2 - Expands a compressed file
 
-bzip2-Compresses or expands files and directories
+bzip2 - Compresses or expands files and directories
 
-gunzip-Expands a compressed file
+gunzip - Expands a compressed file
 
-gzip-Compresses or expands files and directories
+gzip - Compresses or expands files and directories
 
-tar-creates, expands or lists the contents of compressed or uncompressed file or directory archives known as tape archives or tarballs
+tar - creates, expands or lists the contents of compressed or uncompressed file or directory archives known as tape archives or tarballs
 
 To create a compressed archive of a directory,use tar's czf options
 
@@ -65,13 +65,13 @@ The /bin contains the essential commands used by the system for running and boot
 
 22) Use and edit files in the /etc directory
 
-fstab-The file system table is a text file listing each hard drive,CD-ROM,floppy or other storage device attached to your PC. Nearly all entries in fstab can be maipulated by root using the mount command.
+fstab - The file system table is a text file listing each hard drive,CD-ROM,floppy or other storage device attached to your PC. Nearly all entries in fstab can be maipulated by root using the mount command.
 
 modprobe.d/-This folder holds all the instructions to load kernel modules that are required as part of the system startup and replaces the historic modprobe.conf file.
 
-passwd:-The list of users for the system, along with user account information.of
+passwd :- The list of users for the system, along with user account information.of
 
-shells:- A list of approved shells.
+shells :- A list of approved shells.
 
 23) Protect the contents of user directories-/home
 
@@ -89,11 +89,11 @@ cat /proc/meminfo
 
 sudo echo 1>/proc/sys/net/ipv4/tcp_syncookies
 
--getting CPU information, such as family, type and speed from /proc/cpuinfo
+- getting CPU information, such as family, type and speed from /proc/cpuinfo
 
--viewing important networking information under /proc/net, such as active interfaces information under /proc/net/dev,routing information in /proc/net/route and network statistics in /proc/net/netstat
+- viewing important networking information under /proc/net, such as active interfaces information under /proc/net/dev,routing information in /proc/net/route and network statistics in /proc/net/netstat
 
--reporting media mount point information via USB; for example, the linux kernel reports what device to use to access files(such as /dev/sda) if a USB camera or hard drive is detected on the system. You can use the dmesg command to see this information.
+- reporting media mount point information via USB; for example, the linux kernel reports what device to use to access files(such as /dev/sda) if a USB camera or hard drive is detected on the system. You can use the dmesg command to see this information.
 
 24) Work with shared data in the /usr directory
 
@@ -111,38 +111,38 @@ The /var directory contains subdirectories used by various system services for s
 
 A number of in-memory variables are assigned and loaded by default when the user logs in. These variables are known as shell environment variables, which can be used by various commands to get information about your environment, such as the type of system you are running, your home directory and the shell in use.
 
-PWD:-To provide the name of the current working directory.
+PWD :- To provide the name of the current working directory.
 
-USER:-To declare the user's name, such as andrew.
+USER :- To declare the user's name, such as andrew.
 
-LANG:-To set language defaults, such as english.
+LANG :- To set language defaults, such as english.
 
-SHELL:-To declare the name and location of the current shell, such as /bin/bash.
+SHELL :- To declare the name and location of the current shell, such as /bin/bash.
 
-PATH:-To set the default location of executable files, such as /bin, /usr/bin and so on.
+PATH :- To set the default location of executable files, such as /bin, /usr/bin and so on.
 
-TERM:-To set the type of terminal in use, such as vt100, which can be important when using screen-oriented programs, such as text editors.
+TERM :- To set the type of terminal in use, such as vt100, which can be important when using screen-oriented programs, such as text editors.
 
-MACHINE:-To declare system type, system architecture and so on.
+MACHINE :- To declare system type, system architecture and so on.
 
 $env
 
 28) Working with vi
 
-Cursor movement:- h, j, k ,l (left, down, up, right) 
+Cursor movement :- h, j, k ,l (left, down, up, right) 
 
-Delete character:- x
+Delete character :- x
 
-Delete line:- dd
+Delete line :- dd
 
-mode toggle:- Esc, insert(or i)
+mode toggle :- Esc, insert(or i)
 
-Quit:- q
+Quit :- q
 
-Quit without saving:- q!
+Quit without saving :- q!
 
-Run a shell command:- sh (use 'exit' to return)
+Run a shell command :- sh (use 'exit' to return)
 
-Save file:- w
+Save file :- w
 
 Text search- /
