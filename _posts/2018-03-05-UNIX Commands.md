@@ -41,13 +41,21 @@ $ apt -get dist -upgrade
 $vi file.txt
 
 •	Cursor movement - h,j,k,l(left,down,up and right)
+
 •	Delete character - x
+
 •	Delete line - dd
+
 •	Mode - Esc, Insert(or i)command
+
 •	Quit - q
+
 •	Quit without saving - q!
+
 •	Run a shell command - sh(use 'exit')
+
 •	Save file - w
+
 •	Text search - /
 
 6) Working with Permissions
@@ -55,6 +63,7 @@ $vi file.txt
 •	You can examine the default permissions for a file you create by using the unmask or touch command
 
 $ touch file
+
 $ ls -l file
 
 In the above example, the touch command is used to quickly create a file. The ls commands then reports on the file, displaying information(from left to right) in the first field of output(such as -rw-r--r--)
@@ -74,25 +83,31 @@ In the above example, the touch command is used to quickly create a file. The ls
 Under linux, permissions are grouped by owner, group and others with read, write and execute permission assigned to each.
 
 Owner Group Others
+
 rwx   rwx   rxw
 
 Permissions can be indicated by mnemonic or octal characters. Mnemonic characters are
 
 •	r : indicates permissions for an owner, member of the owners group, or others to open and read the file.
+
 •	w : indicates permission for an owner, member of the owners group or others to open and write to the file.
+
 •	x : indicates permission for an owner, member of the owners group or others to execute the file.
 
 Many users prefer to use numeric codes, based on octal(base 8) values, to represeent permissions. here's what these values mean.
 
 -4 indicates read permission
+
 -2 indicates write permission
--1 indicates execute permission.
+
+-1 indicates execute permission
 
 9) Directory Permissions
 
 Directories are also files under Linux. For example, again use the ls command to show permissions like this:
 
 $ mkdir foo
+
 $ ls -ld foo
 
 drwxrwxr-x
@@ -118,11 +133,13 @@ for eg: if you create a file, such as readme.txt, the file will have default per
 As you can see, you and members of your group can read and write the file.Anyone else can only read the file. You can remove all write permission for anyone by using chmod, the minus sign, and aw like so:
 
 $chmod -aw readme.txt
+
 $ls -l readme.txt
 
 Now, no one can write to the file(except you, if the file is in your home or /tmp directory because of directory permissions.). To restore read and write permission for only you as the owner, use the plus sign and the u and rw options like so
 
 $chmod u+rw readme.txt
+
 $ls -l readme.txt
 
 You can also use the octal form of the chmod command, for eg:, to modify a file's permissions so that only you, the owner can read and write a file. Use the chmod command and a file permission of 600, like this:
