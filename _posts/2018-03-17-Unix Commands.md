@@ -105,24 +105,43 @@ sudo -i
 17) Basic Linux Directories
 
 /    The root directory
+
 /bin    Essential commands
+
 /boot    Boot loader files, Linux kernal
+
 /dev    Device files
+
 /etc    System configuration files
+
 /home    User home directories
+
 /initrd initial RaM disk boot support(used during boot time)
+
 /lib    Shared libraries, kernal modules
+
 /lost+found    Directory for recovered files(if found after a file system check)
+
 /media    Mount point for removable media, such as DVDs and floppy disks
+
 /mnt    usual mount point for local, remote file systems
+
 /opt    Add-on software packages
+
 /proc    Kernal information, process control
+
 /root    Super-user (root) home.
+
 /sbin    System commands(mostly root only)
+
 /srv    Holds information relating to services that run on your system
+
 /sys    Real-time information on devices used by kernal
+
 /tmp    Temporary files
+
 /usr    Secondary software file hierarchy
+
 /var    Variable data(such as logs); spooled files
 
 18) GNU Commands to search the file system
@@ -136,6 +155,7 @@ whatis command:-
 Returns a one-line synopsis from the command's main page
 
 locate file:-
+
 Returns locations of all matching files
 
 apropos subject:-
