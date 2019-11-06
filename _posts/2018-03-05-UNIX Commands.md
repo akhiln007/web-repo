@@ -84,7 +84,7 @@ Under linux, permissions are grouped by owner, group and others with read, write
 
 Owner Group Others
 
-rwx   rwx   rxw
+rwx    rwx    rxw
 
 Permissions can be indicated by mnemonic or octal characters. Mnemonic characters are
 
@@ -119,11 +119,17 @@ In the above example, the mkdir command is used to create a directory. The ls co
 The mnemonic forms of chmod's options(when used with plus,+, character to add or a minus sign,-, to take away) designate the follwoing.
 
 •	u : Adds or removes user (owner) read, write or execute permissions.
+
 •	g : Adds or removes group read, write, or execute permissions
+
 •	o : Adds or removes read, write, or execute permission for others not in a file group
+
 •	a : Adds or removes read, write,or execute permissions for all users
+
 •	r : Adds or removes read permission
+
 •	w : Adds or removes write permission
+
 •	x : Adds or removes execution permission
 
 for eg: if you create a file, such as readme.txt, the file will have default permissions(set by the unmask setting in /etc/bashrc) of
