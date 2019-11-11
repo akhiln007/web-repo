@@ -80,9 +80,12 @@ The full power of standard input and output only becomes clear when we combine t
 
 It is done by placing the “|” character between the two commands.
 
+
 $ cat lorem.txt combined.txt | wc
 
+
 $ grep -iw rum story.txt | more
+
 
 A very common use of piping is to the more command. If a command’s output is too long to fit on a single screen then piping it through more paginates the output.
 
