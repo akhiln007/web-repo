@@ -93,23 +93,23 @@ In addition to logging on to remote systems, we may also want to transfer files 
 
 There is a file on the machine smaug.linux.pwf.cam.ac.uk called “/tmp/fetch.txt”. To fetch it into the current working directory we could run the following command.
 
-$ scp smaug.linux.pwf.cam.ac.uk:/tmp/fetch.txt fetch.txt
+$ scp codeability.org.in:/tmp/fetch.txt fetch.txt
 
 Note: How we define a file on a remote computer: machine_name:file_path with a colon separating the two components.
 
 Just as with ssh, scp assumes you have the same login id on the remote system as on the local one. If you have a different name on the remote system then you specify with as you did for ssh, with “user@” before machine_name:file_path element. So if your remote user id was “bob”, you would run the command.
 
-$ scp bob@smaug.linux.pwf.cam.ac.uk:/tmp/fetch.txt fetch.txt
+$ scp akhil@codeability.org.in:/tmp/fetch.txt fetch.txt
 If we are happy for the file name to remain the same there is a trick to save the on the typing. We can say “Copy it into this directory” in which case the copy will leave it with the same file name.
 
-$ scp bob@smaug.linux.pwf.cam.ac.uk:/tmp/fetch.txt .
+$ scp akhil@codeability.org.in:/tmp/fetch.txt .
 
 Recall that “.” means the current directory.
 
 We can rename the file by just giving a different name as the second argument.
 
-$ scp bob@smaug.linux.pwf.cam.ac.uk:/tmp/fetch.txt new_fetch.txt
+$ scp akhil@codeability.org.in:/tmp/fetch.txt new_fetch.txt
 
 To fetch a directory and everything in it, we must specify a recursive copy, just as we had to do to copy a directory within the system. Unfortunately, the scp program hasn’t moved to the modern upper case “-R” option for recursion. So we have to use the lower case “-r”
 
-$ scp -r smaug.linux.pwf.cam.ac.uk:/tmp/fetchable. 
+$ scp -r akhil.linux.codeability.org.in:/tmp/fetchable. 
