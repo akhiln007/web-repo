@@ -1,6 +1,6 @@
 ---
 layout: post
-title: UNIX - Commands
+title: UNIX - Commands - dmesg, less, cp, sudo, VI, Permissions
 ---
 
 {{ page.title }}
