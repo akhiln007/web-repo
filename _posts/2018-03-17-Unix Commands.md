@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: UNIX - Commands
+title: UNIX - Commands - Permissions, root, users, shutdown, docs, man pages, GNU Commands
 ---
 
 
