@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: UNIX - Commands - Managing File, kernel Interaction, Environment variables, Working with vi
+title: UNIX - Commands - Files, kernel Interact, Env Variables, Work with vi
 ---
 
 
