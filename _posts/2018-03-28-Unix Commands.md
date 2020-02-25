@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: UNIX - Commands
+title: Managing File, kernel Interaction, Environment variables, Working with vi
 ---
 
 
