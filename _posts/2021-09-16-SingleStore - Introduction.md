@@ -28,3 +28,7 @@ Scalable - Horizontal scale, On-premises or cloud, Highly available and Secure.
 Proven - ANSI SQL, Transactional and relational, Universal Ecosystem.
 
 
+References:
+
+SingleStore Training.
+
