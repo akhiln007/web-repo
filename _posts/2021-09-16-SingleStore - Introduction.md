@@ -22,7 +22,9 @@ Concurrency:- SingleStore can support hundreds or thousands of live requests fro
 Database platform for Real-Time Analytics:- 
 
 Real-Time - Fast Ingest, Low Latency queries, High Concurrency
+
 Scalable - Horizontal scale, On-premises or cloud, Highly available and Secure.
+
 Proven - ANSI SQL, Transactional and relational, Universal Ecosystem.
 
 
