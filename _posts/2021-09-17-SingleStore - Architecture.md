@@ -52,3 +52,8 @@ Master Aggregator and Child Aggregator load balances to the leaf nodes.
 
 ![image](https://user-images.githubusercontent.com/8998457/133602539-974c2b1d-c944-467e-9f9a-1291110cc0ec.png)
 
+
+
+References:
+
+SingleStore Training.
