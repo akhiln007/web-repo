@@ -13,7 +13,7 @@ title: SingleStore - Architecture
 
 SingleStore is based on distributed computing. It has three core hardware components, which are Aggregators, Leaf Nodes and Partitions.
 
-![image](https://user-images.githubusercontent.com/8998457/133766368-336c3b0b-4fab-46ef-b8ba-7035618cae1a.png)
+![image](https://user-images.githubusercontent.com/8998457/133766992-8e18f3e2-e5a0-4db1-aa92-ece1797d5c67.png)
 
 
 
@@ -32,7 +32,8 @@ Leaf - Must have atleast one, Can have multiple or many.
 4) Leaf Nodes and Data Storage:- 
 
 
-![image](https://user-images.githubusercontent.com/8998457/133766672-13fa7321-62af-413f-a141-1d0700705e6c.png)
+![image](https://user-images.githubusercontent.com/8998457/133767045-007ce5dd-2cdc-4aaa-83c2-08d06d8f7ec4.png)
+
 
 
 Master Aggregator -> Child Aggregator -> Leaf -> Partitions
