@@ -13,6 +13,10 @@ title: SingleStore - Architecture
 
 SingleStore is based on distributed computing. It has three core hardware components, which are Aggregators, Leaf Nodes and Partitions.
 
+![image](https://user-images.githubusercontent.com/8998457/133766368-336c3b0b-4fab-46ef-b8ba-7035618cae1a.png)
+
+
+
 1) Nodes:- The client application will send requests to a SQL interpretor and that is routed to an Aggregator and that request is distributed to the Leaf nodes. Leaf nodes will compute the results for the request on the partition of the storage. Once the results are computed, they are aggregated back to the Aggregators and the results are shared to the client application. Aggregators and Leaves are known as the Nodes.
 
 2) Aggregators:- There are two types of aggregators, they are master aggregator and child aggregator. Master aggregator can run the DML, DDL and CML commands. The child aggregator runs the DML commands. Child aggregator forwards the DDL commands to the Master aggregator. Child aggregators are mainly used for load balancing of the requests.
@@ -26,6 +30,10 @@ Child Aggregator - Don't need any, Can have multiple, DML, DDL through forwardin
 Leaf - Must have atleast one, Can have multiple or many.
 
 4) Leaf Nodes and Data Storage:- 
+
+
+![image](https://user-images.githubusercontent.com/8998457/133766672-13fa7321-62af-413f-a141-1d0700705e6c.png)
+
 
 Master Aggregator -> Child Aggregator -> Leaf -> Partitions
 
