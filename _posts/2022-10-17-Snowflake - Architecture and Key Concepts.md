@@ -16,6 +16,9 @@ How does Snowflake differ from other traditional architectures.
 
 Snowflake’s architecture is a hybrid of traditional shared-disk and shared-nothing database architectures. Similar to shared-disk architectures, Snowflake uses a central data repository for persisted data that is accessible from all compute nodes in the platform. But similar to shared-nothing architectures, Snowflake processes queries using MPP (massively parallel processing) compute clusters where each node in the cluster stores a portion of the entire data set locally. This approach offers the data management simplicity of a shared-disk architecture, but with the performance and scale-out benefits of a shared-nothing architecture.
 
+![image](https://user-images.githubusercontent.com/8998457/196169851-da0ff0a2-dad8-4c2e-a001-b0bb95cf8a1b.png)
+
+
 Snowflake’s unique architecture consists of three key layers:
 
 Database Storage
