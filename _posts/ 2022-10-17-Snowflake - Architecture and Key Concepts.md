@@ -10,8 +10,6 @@ title: Snowflake - Architecture and Key Concepts
 
 ================
 
-2022-10-17-Snowflake - Architecture and Key Concepts.md
-
 Snowflake is the first analytical database built for the cloud, delivered as a datawarehouse as a service.
 
 How does Snowflake differ from other traditional architectures.
