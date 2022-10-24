@@ -9,6 +9,7 @@ title: Snowflake - Architecture and Key Concepts
 {{ page.title }}
 
 ================
+
 What is Snowflake
 
 A cloud data platform offered as a service. Snowflake is the first analytical database built for the cloud, delivered as a datawarehouse as a service.
