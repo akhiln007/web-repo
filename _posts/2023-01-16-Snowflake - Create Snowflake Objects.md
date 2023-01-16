@@ -28,12 +28,19 @@ select current_database(), current_schema();
 Create a table named emp_basic in emp.public using the CREATE TABLE command:
 
 create or replace table emp_basic (
+
   first_name string ,
+  
   last_name string ,
+  
   email string ,
+  
   streetaddress string ,
+  
   city string ,
+  
   start_date date
+  
   );
 
 3. Creating a Virtual Warehouse
@@ -41,9 +48,13 @@ create or replace table emp_basic (
 Create an X-Small warehouse named emp_wh using the CREATE WAREHOUSE command:
 
 create or replace warehouse emp_wh with
+
   warehouse_size='X-SMALL'
+  
   auto_suspend = 180
+  
   auto_resume = true
+  
   initially_suspended=true;
 
 Note that the warehouse is not started initially, but it is set to auto-resume, so it will automatically start running when you execute your first SQL command that requires compute resources.
