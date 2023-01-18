@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Date Dimension
+title: Snowflake - Date Dimension
 ---
 
 
