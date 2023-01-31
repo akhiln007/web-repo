@@ -10,8 +10,6 @@ title: Snowflake - Time Dimension
 
 ================
 
-2023-01-31-Snowflake - Time Dimension script.md
-
 create or replace sequence dim_time_time_key_seq start = 1 increment = 1;
 
 create or replace TABLE EUS_SO_PUB.SO_MART.DIM_TIME (
