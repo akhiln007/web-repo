@@ -17,6 +17,7 @@ b=2
 def Sum():
     
     global a, b
+    
     b=a+b
 
 Sum()
