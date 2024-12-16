@@ -33,7 +33,7 @@ print("Reminder 14 % 4 =",14%4)
 
 print("Maximum of - 6 7 4 3 9 5 2",max(6,7,4,3,9,5,2))
 
-("Minimum of - 6 7 4 3 9 5 2",min(6,7,4,3,9,5,2))
+print("Minimum of - 6 7 4 3 9 5 2",min(6,7,4,3,9,5,2))
 
 print("Power of - 3,3 is:-",math.pow(3,3))
 
