@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Python - Global Variables
+title: Python - Arithmetic Operators
 ---
 
 
