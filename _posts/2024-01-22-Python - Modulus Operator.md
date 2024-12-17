@@ -11,10 +11,13 @@ title: Python -  Modulus Operator
 ================
 
 quotient = 14 / 4 
+
 print(quotient)
 
 quotient_int = 14 // 4 
+
 print(quotient_int)
 
 remainder = 14 % 4 
+
 print(remainder) 
