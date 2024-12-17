@@ -10,9 +10,6 @@ title: Python -  Encapsulation and Generalization
 
 ================
 
-2024-02-07-Python - Encapsulation and Generalization.md
-
-
 def printMultiples(n): 
 
   i = 1 
