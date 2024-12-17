@@ -1,7 +1,7 @@
 ---
 layout: post
 
-title: Python - New Function
+title: Python - Function Definition
 ---
 
 
