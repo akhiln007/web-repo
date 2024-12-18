@@ -10,5 +10,7 @@ title: Python -  Compound Data Type
 ================
 
 fruit = "banana" 
+
 letter = fruit[1] 
+
 print(letter)
