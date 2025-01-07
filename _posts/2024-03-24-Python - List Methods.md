@@ -10,20 +10,16 @@ title: Python -  List Methods
 ================
 
 
-new_list = [x for x in range(1,6)]
+numbers=[1,2,3,1,2,3]
 
-print(new_list)
+print(numbers.count(2))
 
-doubles = [x*2 for x in range(1,6)]
+numbers=[1,2,3,1,2,3]
 
-print(doubles)
+print(numbers.index(2))
 
-# doubled numbers that are evenly divisible by three
+print(numbers.index(2,1))
 
-doubles_by_3 = [x*2 for x in range(1,6) if (x*2)%3 == 0]
+s = ["Lee", "Walsh", "Roberson", "Brewer"]
 
-print(doubles_by_3)
-
-cubes_by_four=[y**3 for y in range(1,11) if ((y**3)%4)==0]
-
-print(cubes_by_four)
+print(len(s)) #4
